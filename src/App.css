@@ -1,17 +1,16 @@
-.textarea {
+.textarea{
   margin:0 auto 1vh 20%;
   position: fixed;
   bottom: 0;
   left: 0;
   width: 60%;
   padding: 10px;
-  background-color: grey; /* Uncomment if needed */
+
 }
 
 .neechekicheeze {
   display: flex;
   align-items: center;
-  background-color: grey; /* Uncomment if needed */
   padding: 10px;
   max-width: 950px; /* Adjust max-width as needed */
   margin: 0 auto; /* Center horizontally */
@@ -32,9 +31,42 @@ input {
 }
 
 svg {
-  margin: 5px 10px;
+  margin: 5px 5px;
+  color:white;
 }
 
 .round {
   border-radius: 20em;
+}
+
+.dark-color{
+  background-color: grey;
+}
+
+.container-fluid{
+  margin:0;
+  padding: 10px;
+}
+
+.navigation-btn{
+  display:flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin:1em;
+}
+
+.navigation-btn p{
+  display:inline-block;
+  font-size:1.2rem;
+  font-weight: 500;
+  margin-top:0.5em;
+  /* font-family:; */
+  color: grey;
+}
+
+#profile-btn{
+  border:none;
+  background-color: gray;
+  border-radius: 50%;
+  margin-left: 0.5lh;
 }
