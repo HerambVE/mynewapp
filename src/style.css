@@ -1,0 +1,529 @@
+/* General Styles */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--container-back);
+  overflow-x: hidden;
+}
+
+::selection {
+  color: var(--color-1);
+  background-color: var(--color-2);
+}
+
+:root {
+  --color-1: #5e8cba;
+  --color-2: #253d55;
+  --color-3: #8ea1b5;
+  --trans-bg: #e3e6e8ba;
+  --container-back: #cfdce8;
+  --stroke-color: #456a8f;
+  --yellow-bg: #FFBB5C;
+}
+
+.stroke {
+  color: transparent;
+  -webkit-text-stroke: 2px var(--stroke-color);
+}
+
+.stroke-light {
+  color: transparent;
+  -webkit-text-stroke: 1px #000000;
+}
+
+::placeholder {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+
+.light {
+  font-weight: 400;
+}
+
+.italic {
+  font-style: italic;
+}
+
+/* Creators Section */
+.creators {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns layout */
+  gap: 20px; /* Space between items */
+  justify-items: center; /* Center the content inside the grid */
+}
+
+.creator-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.creator-item:hover {
+  transform: translateY(-10px); /* Hover effect */
+}
+
+.creator-item img {
+  width: 180px; /* Set a fixed width for the images */
+  height: 180px;
+  object-fit: cover; /* Ensures the image covers the container without distortion */
+  border-radius: 15px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.creator-item img:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+.info {
+  margin-top: 15px;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.class-name {
+  background-color: var(--yellow-bg);
+  color: black;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-top: 8px;
+  transition: all 0.3s ease;
+}
+
+.bg-yellow-color-black:hover {
+  transform: translateX(-5px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* Stack items on smaller screens */
+  }
+
+  .creator-item img {
+    width: 150px; /* Smaller image size for mobile */
+    height: 150px;
+  }
+}
+
+/* Float Hover Animations */
+.float-hover-one, .float-hover-two, .float-hover-three, .float-hover-four {
+  transition: all ease 0.5s;
+  box-shadow: 0 0 30px rgb(232, 231, 231);
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.float-hover-one:hover, .float-hover-two:hover, .float-hover-three:hover, .float-hover-four:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 50px rgb(232, 231, 231);
+}
+
+/* Inline and Block Customization */
+.inline {
+  display: inline;
+}
+
+.block {
+  display: block;
+}
+
+.right-align {
+  text-align: right;
+}
+
+/* Custom Top Element Holder */
+.top-element-holder {
+  margin-top: 2vh;
+  margin-left: -10vb;
+  width: 95vw;
+  padding: 1.2em;
+  border-radius: 2em;
+  position: fixed;
+  background-color: rgba(240, 248, 255, 0.892);
+  z-index: 1000;
+}
+
+.list-items {
+  margin-right: 3vb;
+  margin-left: 3vb;
+  font-weight: 500;
+}
+
+/* Girl Logo */
+.girl-logo {
+  height: 60px;
+  width: 60px;
+  border-radius: 40%;
+}
+
+/* Nav Customization */
+.nav {
+  background-color: var(--trans-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  height: 10vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  border-radius: 10px;
+}
+
+.branding {
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 50px;
+}
+
+.branding h1 {
+  color: var(--color-3);
+}
+
+.girl {
+  margin-right: 10px;
+  height: 5vh;
+  width: auto;
+  border-radius: 50%;
+}
+
+/* Nav Links */
+.links {
+  width: 40%;
+}
+
+.links ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.links ul li {
+  position: relative;
+  list-style-type: none;
+}
+
+.links ul li a {
+  color: var(--color-3);
+  transition: all ease 0.3s;
+  text-decoration: none;
+}
+
+.links ul li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: var(--color-3);
+  width: 0%;
+  transition: all ease 0.5s;
+}
+
+.links ul li:hover::after {
+  width: 100%;
+  background-color: #000000;
+}
+
+.links ul li:hover a {
+  color: #000000;
+}
+
+/* Container Customization */
+.container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--container-back);
+}
+
+.container .text {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  padding-left: 100px;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container .text > h1 {
+  color: var(--stroke-color);
+  font-size: 40px;
+}
+
+.container .text > p {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.container .img {
+  width: 50%;
+  height: 100%;
+  background-image: url("../public/assets/boy_bg.png");
+  background-position: center;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  border-radius: 30%;
+  transition: all ease 0.5s;
+  cursor: pointer;
+}
+
+.container .img:hover {
+  transform: translateY(-10px);
+}
+
+/* Learn More Button */
+.learn_more {
+  width: 30%;
+  padding: 10px 20px;
+  border: 2px solid #fff;
+  background-color: var(--container-back);
+  border-radius: 30px;
+  transition: all ease 0.5s;
+  margin-top: 10px;
+  box-shadow: inset 0 0 10px var(--color-3);
+  cursor: pointer;
+}
+
+.learn_more a {
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  color: var(--color-2);
+}
+
+.learn_more:hover {
+  background-color: #fff;
+  box-shadow: inset 0 0 5px var(--color-3);
+}
+
+/* Form Customization */
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--container-back);
+  margin-top: -50px;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  color: black;
+  font-size: 30px;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.email input, .pass input {
+  color: white;
+  background-color: #8ea1b5;
+  padding: 10px 20px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  margin: 10px;
+  outline: none;
+  transition: all ease 0.5s;
+  font-family: 'Poppins', sans-serif;
+}
+
+input:hover {
+  border: 2px solid #8ea1b5;
+  background-color: transparent;
+  color: #8ea1b5;
+}
+
+button {
+  padding: 10px 20px;
+  border-radius: 10px;
+  outline: none;
+  border: 2px solid transparent;
+  background-color: #8ea1b5;
+  transition: all ease 0.5s;
+}
+
+button a {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  text-decoration: none;
+}
+
+button:hover {
+  background-color: transparent;
+  border: 2px solid #8ea1b5;
+}
+
+button:hover a {
+  color: #8ea1b5;
+}
+
+/* Software Page */
+.software {
+  height: 110vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.software .head {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30vh;
+}
+
+.software .img {
+  margin-top: -40px;
+  width: 100%;
+  height: 70vh;
+}
+
+.software .img img {
+  height: 100%;
+  width: 100%;
+  transition: all ease 0.5s;
+}
+
+.software .img img:hover {
+  transform: translateY(-10px);
+}
+
+/* Download Button */
+.down_button {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -30px;
+}
+
+.down_button .download {
+  padding: 10px 20px;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  outline: none;
+  background-color: #5e8cba;
+  transition: all ease 0.5s;
+  box-shadow: 0 0 20px rgb(232, 231, 231);
+  cursor: pointer;
+}
+
+.download:hover {
+  background-color: transparent;
+  border: 2px solid #5e8cba;
+}
+
+.download:hover a {
+  color: #5e8cba;
+}
+
+.download a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.download-app {
+  margin-left: 10px;
+  background-color: #5e8cba;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.download-app:hover {
+  background-color: #253d55;
+}
+
+.bottom-element-holder {
+  text-align: center;
+}
+
+.bottom-element-holder a:link {
+  color: #253d55;
+}
+
+.bottom-element-holder a:hover {
+  color: red;
+}
+
+.threed {
+  position: fixed;
+  right: 2vb;
+  bottom: 2vh;
+  z-index: 1000;
+}
+
+.web-name {
+  padding: 40% 0 auto 0;
+}
+
+.image-item {
+  display: inline;
+}
+
+.about {
+  background-color: #f9f9f9;
+  padding: 40px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}

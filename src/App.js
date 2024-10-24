@@ -1,25 +1,19 @@
 import React from 'react';
-import OptionsMenu from './components/dropdown';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/home/home.js';
+import Login from './pages/login/login.js';
+import Signup from './pages/signup/signup.js'
 
 function App() {
   return (
-    <>
-      <div className="navigation-btn">
-        <OptionsMenu/>
-      </div>
-      <div className="textarea dark-color round">
-        <form target="/" className='neechekicheeze dark-color round'>
-          <textarea placeholder='type here...' className="text-area"></textarea>
-          <label>
-            <input type="submit"/>
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" viewBox="0 0 16 16" className="send-btn">
-              <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
-            </svg>
-          </label>
-        </form>
-      </div>
-    </>
+    <Router>
+      <Routes>
+        <Route index path="/" element={<Home />} />
+        <Route path="/Login" element={<Login />} />
+        <Route path="/Registration" element={<Signup />} />
+        <Route path="*" element={<Home/>} />
+      </Routes>
+    </Router>
   );
 }
 
