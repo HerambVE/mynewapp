@@ -8,13 +8,7 @@ import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, si
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyAA6KQU49PhDdL3FJb8OtfvBVom2qMzCpE",
-  authDomain: "calmspace-9e61b.firebaseapp.com",
-  projectId: "calmspace-9e61b",
-  storageBucket: "calmspace-9e61b.appspot.com",
-  messagingSenderId: "852097299855",
-  appId: "1:852097299855:web:51147be8381059598d87fa",
-  measurementId: "G-WHSD5CGPG8"
+ 
 };
 
 // Initialize Firebase
